@@ -88,4 +88,20 @@
     <name>yarn.resourcemanager.resource-tracker.address</name>
     <value>{{ env "HOSTNAME"}}.node.consul:8031</value>
   </property>
+  <property>
+    <description>Host:Port of the ZooKeeper server to be used by the RM. This must be supplied 
+    when using the ZooKeeper based implementation of the RM state store and/or embedded automatic 
+    failover in a HA setting.</description>
+    <name>yarn.resourcemanager.zk-address</name>
+    <value>zookeeper.service.consul:2181</value>
+  </property>
+  <property>
+    <description>Enable RM high-availability.When enabled, (1) The RM starts in the Standby mode by default, 
+    and transitions to the Active mode when prompted to. (2) The nodes in the RM ensemble are listed in 
+    yarn.resourcemanager.ha.rm-ids (3) The id of each RM either comes from yarn.resourcemanager.ha.id if 
+    yarn.resourcemanager.ha.id is explicitly specified or can be figured out by matching yarn.resourcemanager.address.{id} 
+    with local address (4) The actual physical addresses come from the configs of the pattern - {rpc-config}.{id}</description>
+    <name>yarn.resourcemanager.ha.enabled</name>
+    <value>false</value>
+  </property>
 </configuration>

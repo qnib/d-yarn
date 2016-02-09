@@ -19,4 +19,4 @@ fi
 
 consul-template -consul localhost:8500 -once -template ${CTMPL}:/etc/hadoop/yarn-site.xml
 
-su -c '/usr/bin/yarn resourcemanager' hdfs
+su -c '/usr/bin/yarn resourcemanager' yarn

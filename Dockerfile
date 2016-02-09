@@ -19,3 +19,5 @@ ADD etc/supervisord.d/yarn-nodemanager.ini \
 ADD opt/qnib/yarn/nodemanager/bin/start.sh /opt/qnib/yarn/nodemanager/bin/
 ADD opt/qnib/yarn/resourcemanager/bin/start.sh /opt/qnib/yarn/resourcemanager/bin/
 ADD etc/consul-templates/yarn/yarn-site.xml-INIT.ctmpl /etc/consul-templates/yarn/
+ADD etc/consul.d/yarn-resourcemanager.json \
+    etc/consul.d/
