@@ -1,4 +1,4 @@
-#!/usr/local/bin/dumb-init /bin/sh
+#!/usr/local/bin/dumb-init /bin/bash
 
 source /etc/bashrc.hadoop
 source /opt/qnib/consul/etc/bash_functions.sh

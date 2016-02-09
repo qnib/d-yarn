@@ -14,6 +14,12 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
+
+  <property>
+    <description></description>
+    <name></name>
+    <value></value>
+  </property>
 -->
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
@@ -61,5 +67,25 @@
         $HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,
         $HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*
      </value>
+  </property>
+  <property>
+    <description>The hostname of the RM.</description>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>{{ env "HOSTNAME"}}.node.consul</value>
+  </property>
+  <property>
+    <description>The http address of the RM web application.</description>
+    <name>yarn.resourcemanager.webapp.address</name>
+    <value>{{ env "HOSTNAME"}}.node.consul:8088</value>
+  </property>
+  <property>
+    <description>The address of the RM admin interface.</description>
+    <name>yarn.resourcemanager.admin.address</name>
+    <value>{{ env "HOSTNAME"}}.node.consul:8033</value>
+  </property>
+  <property>
+    <description>The address of the RM resource tracker interface</description>
+    <name>yarn.resourcemanager.resource-tracker.address</name>
+    <value>{{ env "HOSTNAME"}}.node.consul:8031</value>
   </property>
 </configuration>
